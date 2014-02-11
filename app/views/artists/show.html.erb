@@ -1,0 +1,25 @@
+<div class="center">
+<a href="/artists">View all of the artists!</a>
+</div>
+
+<h1> Artist Name: <%= @artist.name %></h1>
+
+<h2>Genre: <%= @artist.genre %></h2>
+
+<img src="<%= @artist.photo_url %>">
+
+
+
+<h3>Update artist info <a href="/artists/<%=@artist.id %>/edit">here</a></h3>
+
+<h3>View songs <a href="/artists/<%= @artist.id %>/songs">here</a></h3>
+
+<form action="/artists/<%= params[:id]%>" method="POST">
+    <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="_method" value="DELETE">
+
+  <div class="center">
+  <button>Delete Artist</button>
+</div>
+
+</form>

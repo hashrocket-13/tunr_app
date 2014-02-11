@@ -1,0 +1,11 @@
+<h1>Welcome to Tunr!!</h1>
+
+<img src="http://etc-mysitemyway.s3.amazonaws.com/icons/legacy-previews/icons/black-paint-splatter-icons-media/001603-black-paint-splatter-icon-media-music-eighth-notes.png">
+
+<h2>Click <a href="/artists/new">here</a> to enter a new artist</h2>
+
+<ul>
+  <% @artists.each do |artist| %>
+    <li><a href="/artists/<%= artist.id %>"><%= artist.name %></li>
+  <% end %>
+</ul>

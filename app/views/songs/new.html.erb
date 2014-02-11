@@ -1,0 +1,20 @@
+<h1>Enter a new song!</h1>
+
+<div class="center">
+<form action="/artists/<%= params[:artist_id] %>/songs" method="POST">
+    <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+  <label>
+    Title: 
+  <input type="text" name="title">
+  </label>
+
+   <label>
+    Year:
+  <input type="integer" name="year">
+  </label>
+
+  <button>Add Song</button>
+
+</form>
+</div>
+

@@ -1,0 +1,13 @@
+<h1>View all the songs by this artist</h1>
+
+
+<ul>
+  <% @songs.each do |song| %>
+    <li><a href="/artists/<%= song.artist.id %>/songs/<%= song.id %>"><%= song.title %></a></li>
+  <% end %>
+</ul>
+
+
+<h3>Add a new song <a href="/artists/<%=params[:artist_id] %>/songs/new"> here</a></h3>
+
+<h3>Go Home<a href="/artists/"> here</a></h3>
